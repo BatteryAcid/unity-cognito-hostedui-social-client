@@ -15,7 +15,6 @@ public class UIInputManager : MonoBehaviour
    private GameObject _authInterface;
    private GameObject _loading;
    private GameObject _welcome;
-   private GameObject _confirmEmail;
 
    // WARNING: these fields and the below #defines are for development and testing the code exchange used in the social login.
    // Only for Editor mode, I do not recommend this manual code input method for production!
@@ -83,8 +82,10 @@ public class UIInputManager : MonoBehaviour
    void Start()
    {
       Debug.Log("UIInputManager: Start");
-      // check if user is already authenticated 
+
       // We perform the refresh here to keep our user's session alive so they don't have to keep logging in.
+      // This can be done less often as the access tokens by default are active 30 days, so as long as you do 
+      // it before whatever the configured expiration is, you can request new ones.
       RefreshToken();
 
       LoginSignupButton.onClick.AddListener(onLoginClicked);

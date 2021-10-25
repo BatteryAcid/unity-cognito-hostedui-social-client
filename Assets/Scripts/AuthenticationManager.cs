@@ -10,7 +10,7 @@ public class AuthenticationManager : MonoBehaviour
    private const string AppClientID = "YOUR_APP_CLIENT_ID"; // App client ID, found under App Client Settings
    private const string AuthCognitoDomainPrefix = "YOUR_COGNITO_DOMAIN"; // Found under App Integration -> Domain Name. Changing this means it must be updated in all linked Social providers redirect and javascript origins
    private const string RedirectUrl = "YOUR_REDIRECT_URL";
-   private const string Region = "us-east-1"; // Update with your region, the AWS region that contains your services
+   private const string Region = "us-east-1"; // Update with the AWS Region that contains your services
 
    private const string AuthCodeGrantType = "authorization_code";
    private const string RefreshTokenGrantType = "refresh_token";
@@ -204,14 +204,6 @@ public class AuthenticationManager : MonoBehaviour
          _userid = userSessionCache.getUserId();
       }
       return _userid;
-   }
-
-   // access to the user's access token to be used wherever needed - may not need this at all.
-   public string GetAccessToken()
-   {
-      UserSessionCache userSessionCache = new UserSessionCache();
-      SaveDataManager.LoadJsonData(userSessionCache);
-      return userSessionCache.getAccessToken();
    }
 
    public string GetIdToken()

@@ -16,6 +16,7 @@ public class ProcessDeepLinkManager : MonoBehaviour
       // Update DeepLink Manager global variable, so URL can be accessed from anywhere.
       deeplinkURL = url;
 
+      _uiInputManager = FindObjectOfType<UIInputManager>();
       _uiInputManager.ProcessDeepLink(deeplinkURL);
    }
 
@@ -27,8 +28,6 @@ public class ProcessDeepLinkManager : MonoBehaviour
 
          // setup deeplink callback
          Application.deepLinkActivated += onDeepLinkActivated;
-
-         _uiInputManager = FindObjectOfType<UIInputManager>();
 
          if (!String.IsNullOrEmpty(Application.absoluteURL))
          {

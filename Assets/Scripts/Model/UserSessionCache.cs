@@ -5,24 +5,14 @@ using UnityEngine;
 public class UserSessionCache : ISaveable
 {
    public string _idToken;
-   public string _accessToken;
    public string _refreshToken;
    public string _userId;
 
    public UserSessionCache() { }
 
-   public UserSessionCache(string idToken, string accessToken, string refreshToken, string userId)
-   {
-      _idToken = idToken;
-      _accessToken = accessToken;
-      _refreshToken = refreshToken;
-      _userId = userId;
-   }
-
    public UserSessionCache(BADAuthenticationResultType authenticationResultType, string userId)
    {
       _idToken = authenticationResultType.id_token;
-      _accessToken = authenticationResultType.access_token;
       _refreshToken = authenticationResultType.refresh_token;
       _userId = userId;
    }
@@ -30,11 +20,6 @@ public class UserSessionCache : ISaveable
    public string getIdToken()
    {
       return _idToken;
-   }
-
-   public string getAccessToken()
-   {
-      return _accessToken;
    }
 
    public string getRefreshToken()

@@ -495,6 +495,8 @@ MonoBehaviour:
   LoginSignupButton: {fileID: 852803606}
   StartButton: {fileID: 2025453614}
   LogoutButton: {fileID: 1191894782}
+  _unauthInterface: {fileID: 335020737}
+  _authInterface: {fileID: 188010317}
   urlWithCodeButton: {fileID: 1364008568}
   urlWithCodeField: {fileID: 1701376954}
 --- !u!114 &416362970
