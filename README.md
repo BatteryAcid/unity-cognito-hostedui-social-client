@@ -14,6 +14,10 @@ To use this with your AWS setup, you have to update both [AuthenticationManager]
 ## Required Plugins for AWS SDK  
 
 * NONE
+    
+## 👋 Let's talk shop 👇  
+[Discord] https://discord.gg/psjbBDvNBK  
+[Twitter] https://twitter.com/BatteryAcidDev
 
 ## References
 * [Add Social Identity Provider to User Pool] https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-social-idp.html
