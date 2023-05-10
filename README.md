@@ -14,6 +14,8 @@ To use this with your AWS setup, you have to update both [AuthenticationManager]
 ## Required Plugins for AWS SDK  
 
 * NONE
+    * ⭐️ However, you can always try using a Unity asset for Deeplinking ⭐️  
+        https://prf.hn/l/ERBXqaN  
     
 ## 👋 Let's talk shop 👇  
 [Discord] https://discord.gg/psjbBDvNBK  
